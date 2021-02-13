@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Fit</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="exercise">
+    <header>
+        <ul class="headernav">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="htips.html" >Health Tips</a></li>
+        </ul>
+            <a href="index.html" class = "logo">STAY <br>FIT!</a>
+        <ul class="headernav">  
+            <li><a href="exercise.html" >Exercises</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+    </header>
+<style>
+
+img {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.mySlideshow {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 16px;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 16px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(255,255,255, 0.5);
+}
+
+.number {
+    color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 5;
+}
+
+.caption {
+    height:fit-content;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+.row:after {
+    display: flex;
+}
+
+.column {
+    float: left;
+    width: 11.11%;
+    display: block;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Basic Exercises</h2>
+
+<div class="container">
+      <div class="mySlideshow">
+            <div class="number">1 / 9</div>
+            <img src="plank.jpg" style="width:100%; height: 400px;">
+    </div>
+
+  <div class="mySlideshow">
+        <div class="number">2 / 9</div>
+        <img src="squat.jpg" style="width:100%; height: 400px;">
+</div>
+
+  <div class="mySlideshow">
+        <div class="number">3 / 9</div>
+        <img src="leg_raise.jpg" style="width:100%; height: 400px;">
+</div>
+    
+  <div class="mySlideshow">
+        <div class="number">4 / 9</div>
+        <img src="single_leg_stand.jpg" style="width:100%; height: 400px;">
+    </div>
+
+  <div class="mySlideshow">
+        <div class="number">5 / 9</div>
+        <img src="push_up.jpg" style="width:100%; height: 400px;">
+    </div>
+    
+  <div class="mySlideshow">
+        <div class="number">6 / 9</div>
+        <img src="jumping_jack.jpg" style="width:100%; height: 400px;">
+    </div>
+
+    <div class="mySlideshow">
+            <div class="number">7 / 9</div>
+            <img src="crunches.jpg" style="width:100%; height: 400px;">
+    </div>
+
+    <div class="mySlideshow">
+            <div class="number">8 / 9</div>
+            <img src="hip_rotation.jpg" style="width:100%; height: 400px;">
+    </div>
+
+    <div class="mySlideshow">
+            <div class="number">9 / 9</div>
+            <img src="bridge_posture.jpg"  style="width:100%; height: 400px;">
+    </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption">
+    <p id="name"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="plank.jpg" style="width:100%" onclick="currentSlide(1)" alt="Plank">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="squat.jpg" style="width:100%" onclick="currentSlide(2)" alt="Squat">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="leg_raise.jpg" style="width:100%" onclick="currentSlide(3)" alt="Leg Raise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="single_leg_stand.jpg" style="width:100%" onclick="currentSlide(4)" alt="Single Leg Stand">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="push_up.jpg" style="width:100%" onclick="currentSlide(5)" alt="Push Up">
+    </div>   
+    <div class="column">
+      <img class="demo cursor" src="jumping_jack.jpg" style="width:100%; height:49px;" onclick="currentSlide(6)" alt="Jumping Jack">
+    </div>
+    <div class="column">
+          <img class="demo cursor" src="crunches.jpg" style="width:100%" onclick="currentSlide(7)" alt="Crunches">
+     </div>
+    <div class="column">
+        <img class="demo cursor" src="hip_rotation.jpg" style="width:100%" onclick="currentSlide(8)" alt="Hip Rotation">
+    </div>
+    <div class="column">
+        <img class="demo cursor" src="bridge_posture.jpg" style="width:100%" onclick="currentSlide(9)" alt="Bridge Posture">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+SlideShow(slideIndex);
+
+function plusSlides(n) {
+  SlideShow(slideIndex += n);
+}
+
+function currentSlide(n) {
+  SlideShow(slideIndex = n);
+}
+
+function SlideShow(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlideshow");
+  var dots = document.getElementsByClassName("demo");
+  var nameText = document.getElementById("name");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  nameText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
